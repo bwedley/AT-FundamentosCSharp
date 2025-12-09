@@ -55,7 +55,17 @@ namespace AT
             //aluno.ExibirDados();
             //aluno.VerificarAprovacao();
 
+
             //-------------------------Exercício 7-------------------------
+            //Ex07_ContaBancaria cb = new Ex07_ContaBancaria();
+            //cb.Titular = "João Silva";
+            //cb.Saldo = 0m;
+            //cb.Depositar(-400.00m);
+            //cb.Depositar(500.00m);
+            //cb.Sacar(700.00m);
+            //cb.Sacar(200.00m);
+            //Console.WriteLine($"Saldo atual: {cb.Saldo}");
+
 
 
 
