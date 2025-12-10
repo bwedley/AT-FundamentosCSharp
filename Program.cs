@@ -67,7 +67,26 @@ namespace AT
             //Console.WriteLine($"Saldo atual: {cb.Saldo}");
 
 
+            //-------------------------Exercício 8-------------------------
+            //Ex08_CadastroFuncionario func = new Ex08_CadastroFuncionario();
+            //func.Nome = "Carem André";
+            //func.Cargo = "Radiologista";
+            //func.SalarioBase = 4500m;
+            //func.ExibirDados();
 
+            //Console.WriteLine("-----------------------------------");
+
+            //Ex08_Gerente ger = new Ex08_Gerente();
+            //ger.Nome = "André Carem";
+            //ger.SalarioBase = 5000m;
+            //ger.BonusGerente();
+            //ger.ExibirDados();
+
+
+            //-------------------------Exercício 9-------------------------
+            
+            Ex09_ControleEstoque controle = new Ex09_ControleEstoque();
+            controle.MenuEstoque();
 
         }
     }
