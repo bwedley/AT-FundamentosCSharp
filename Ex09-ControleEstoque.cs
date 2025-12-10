@@ -11,7 +11,7 @@ namespace AT
         public void MenuEstoque()
         {
             List<Ex09_Produto> produtos = new List<Ex09_Produto>();
-            Arquivo a = new Arquivo("ListaProdutoTesteBrunoWedley");
+            Arquivo a = new Arquivo("estoque-BrunoWedley");
 
             bool sair = false;
             while (produtos.Count < 5 && !sair)

@@ -58,7 +58,7 @@ namespace AT
         public void GravarProdutos(Ex09_Produto p)
         {
             string linha;
-            linha = linha = p.Nome + "|" + p.QtdeEstoque + "|" + p.PrecoUnitario.ToString(CultureInfo.InvariantCulture);
+            linha = linha = p.Nome + "," + p.QtdeEstoque + "," + p.PrecoUnitario.ToString(CultureInfo.InvariantCulture);
             _sw.WriteLine(linha);
         }
 
@@ -75,7 +75,7 @@ namespace AT
             string linha = _sr.ReadLine();
             while (linha != null)
             {
-                string[] campos = linha.Split("|");
+                string[] campos = linha.Split(",");
                 produtos.Add(new Ex09_Produto(campos[0], int.Parse(campos[1]), decimal.Parse(campos[2], CultureInfo.InvariantCulture)));
                 linha = _sr.ReadLine();
             }
