@@ -90,9 +90,16 @@ namespace AT
 
 
             //-------------------------Exercício 10-------------------------
-            Ex10_Adivinhacao adv = new Ex10_Adivinhacao();
-            adv.Adivinhar();
+            //Ex10_Adivinhacao adv = new Ex10_Adivinhacao();
+            //adv.Adivinhar();
 
+            //-------------------------Exercício 11-------------------------
+            //Ex11_CadastroContatos c = new Ex11_CadastroContatos();
+            //c.MenuContatos();
+
+            //-------------------------Exercício 12-------------------------
+            Ex12_CadastroContatosFormatados c12 = new Ex12_CadastroContatosFormatados();
+            c12.MenuContatos();
         }
     }
 }

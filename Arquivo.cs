@@ -54,7 +54,7 @@ namespace AT
             _sr.Close();
         }
 
-        //Gravação e leitura dos produtos para exercício 9
+        //=======================================Gravação e leitura dos produtos para exercício 9=======================================
         public void GravarProdutos(Ex09_Produto p)
         {
             string linha;
@@ -81,6 +81,65 @@ namespace AT
             }
             _sr.Close();        
             return produtos;
+        }
+
+        //=======================================Gravação e leitura dos contatos para exercício 11=======================================
+        public void GravarContatos(Ex11_CadastroContatos c)
+        {
+            string linha;
+            linha = linha = c.Nome + "," + c.Telefone + "," + c.Email;
+            _sw.WriteLine(linha);
+        }
+
+        public List<Ex11_CadastroContatos> LerContatos()
+        {
+            List<Ex11_CadastroContatos> contatos = new List<Ex11_CadastroContatos>();
+            string caminho = $"C:\\ArquivoTesteATCSharp\\{Nome}.txt";
+            if (!File.Exists(caminho))
+            {
+                return contatos;
+            }
+
+            _sr = new StreamReader(caminho);
+            string linha = _sr.ReadLine();
+            while (linha != null)
+            {
+                string[] campos = linha.Split(",");
+                contatos.Add(new Ex11_CadastroContatos(campos[0], campos[1], campos[2]));
+                linha = _sr.ReadLine();
+            }
+            _sr.Close();
+            return contatos;
+        }
+
+        //=======================================Gravação e leitura dos contatos para exercício 12=======================================
+        //Poderia ter utilizado a mesma gravação de contatos anterior, mas optei por usar uma nova para deixar os métodos separados
+
+        public void GravarContatosEx12(Ex12_CadastroContatosFormatados c)
+        {
+            string linha;
+            linha = linha = c.Nome + "," + c.Telefone + "," + c.Email;
+            _sw.WriteLine(linha);
+        }
+        public List<Ex12_CadastroContatosFormatados> LerContatosEx12()
+        {
+            List<Ex12_CadastroContatosFormatados> contatos = new List<Ex12_CadastroContatosFormatados>();
+            string caminho = $"C:\\ArquivoTesteATCSharp\\{Nome}.txt";
+            if (!File.Exists(caminho))
+            {
+                return contatos;
+            }
+
+            _sr = new StreamReader(caminho);
+            string linha = _sr.ReadLine();
+            while (linha != null)
+            {
+                string[] campos = linha.Split(",");
+                contatos.Add(new Ex12_CadastroContatosFormatados(campos[0], campos[1], campos[2]));
+                linha = _sr.ReadLine();
+            }
+            _sr.Close();
+            return contatos;
         }
     }
 }
