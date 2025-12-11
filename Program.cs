@@ -84,9 +84,14 @@ namespace AT
 
 
             //-------------------------Exercício 9-------------------------
-            
-            Ex09_ControleEstoque controle = new Ex09_ControleEstoque();
-            controle.MenuEstoque();
+
+            //Ex09_ControleEstoque controle = new Ex09_ControleEstoque();
+            //controle.MenuEstoque();
+
+
+            //-------------------------Exercício 10-------------------------
+            Ex10_Adivinhacao adv = new Ex10_Adivinhacao();
+            adv.Adivinhar();
 
         }
     }
